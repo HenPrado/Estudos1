@@ -1,0 +1,88 @@
+{
+  "number": 10,
+  "symbol": "NB",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": true,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": {
+    "default": {
+    },
+    "groups": [
+      {
+        "label": "PS",
+        "guards": {
+          "allowList" : {
+            "merkleRoot": "9c2625b9a48608e490b196eafc7d201c6351e41cd06741fe8a6f778dee8312ac"
+          },
+          "startDate": {
+            "date": "2023-04-20 12:30:00 +0000"
+          },
+          "solPayment": {
+            "value": 0,
+            "destination": "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG"
+          }
+        }
+      },
+      {
+        "label": "WL1",
+        "guards": {
+          "allowList" : {
+            "merkleRoot": "ce01f8874581cda04f35b26dae8a9279cdd471a3ec7164331bfbc792dcddf4c8"
+          },
+          "startDate": {
+            "date": "2023-04-20 13:00:00 +0000"
+          },
+          "solPayment": {
+            "value": 0.10,
+            "destination": "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG"
+          },
+          "endDate" : {
+            "date": "2023-04-20 14:00:00 +0000"
+          }
+        }
+      },
+      {
+        "label": "WL2",
+        "guards": {
+          "allowList" : {
+            "merkleRoot": "f195368f926a9b42c2099ca4998fc434e56bbd83e8fc6d229d597374bac646a3"
+          },
+          "startDate": {
+            "date": "2023-04-20 14:00:00 +0000"
+          },
+          "solPayment": {
+            "value": 0.20,
+            "destination": "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG"
+          },
+          "endDate" : {
+            "date": "2023-04-20 15:00:00 +0000"
+          }
+        }
+      },
+      {
+        "label": "Public",
+        "guards": {
+          "startDate": {
+            "date": "2023-04-20 15:00:00 +0000"
+          },
+          "solPayment": {
+            "value": 0.30,
+            "destination": "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG"
+          }
+        }
+      }
+    ]
+  }
+}
