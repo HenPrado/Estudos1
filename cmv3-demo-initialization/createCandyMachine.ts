@@ -19,13 +19,13 @@ import { writeFileSync } from "fs";
 
   const allowList = require("./allowlist.json");
   const demoNftCollection = new PublicKey(
-    "2cUj9sNUhJissuruAKfNuNPA8pSQfaKjg3GrcwfVn3cf"
+    "4zhmA9xGUgTNtfXj7uZESXJ6pHTX1MoaCntFgKqg1ePB"
   );
   const demoTokenMint = new PublicKey(
     "DYMs37sUJz65KmYa31Wzj2TKcTe5M5rhvdkKgcKWiEAs"
   );
   const demoDestination = new PublicKey(
-    "53VVFtLzzi3nL2p1QF591PAB8rbcbsirYepwUphtHU9Q"
+    "CrxGcKQNKgVepwrMUaw7k4WP2qCr5iFHmgtgz7pmVkrG"
   );
 
   const key = Keypair.fromSecretKey(Uint8Array.from(require("./key.json")));
@@ -41,10 +41,10 @@ import { writeFileSync } from "fs";
     ? new PublicKey(cache.program?.collectionMint)
     : (
         await metaplex.nfts().create({
-          name: "Rejected f00kers",
-          uri: "https://arweave.net/MfllB5p9EeidnRRz3ToNUfnTwwmjbqZvOJOkL7GnEEY",
+          name: "Numbers Collection",
+          uri: "https://arweave.net/xYOKoHnGd6_p8H5YTxBx1od4iQkbFbxqFq7dHGLLn2g",
           creators: config.creators,
-          sellerFeeBasisPoints: 0,
+          sellerFeeBasisPoints: 500,
           isCollection: true,
           updateAuthority: key,
         })
