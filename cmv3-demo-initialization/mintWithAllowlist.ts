@@ -35,7 +35,7 @@ const mintingWallet = metaplex.identity().publicKey;
   console.log(
     mintingWallet,
     allowList,
-    // merkleProof,
+    merkleProof,
     merkleProof.map((p) => new PublicKey(p).toString())
   );
   if (!merkleProof.length) return console.log("User is not in allowed list");
@@ -50,15 +50,15 @@ const mintingWallet = metaplex.identity().publicKey;
   //   });
 
   //   return;
-  const group = "waoed";
+  const group = "PS";
   const transactionBuilders: TransactionBuilder[] = [
     callCandyGuardRouteBuilder(metaplex, {
       candyMachine,
       guard: "allowList",
-      group,
+      group: "PS",
       settings: {
         path: "proof",
-        merkleProof,
+        merkleProof: merkleProof,
       },
     }),
   ];
